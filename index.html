@@ -1,99 +1,148 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Velvet Vogue | Luxury Fashion & Style</title>
-<meta name="description" content="Velvet Vogue is a premium fashion and style brand delivering luxury, elegance, and timeless trends.">
-
-<!-- Google AdSense (ADD YOUR ID AFTER APPROVAL) -->
-<!--
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXX"
-crossorigin="anonymous"></script>
--->
-
-<style>
-body { margin:0; font-family:Arial, Helvetica, sans-serif; color:#222; }
-header { background:#000; color:#fff; text-align:center; padding:60px 20px; }
-header h1 { margin:0; font-size:42px; }
-header p { font-size:16px; letter-spacing:1px; margin-top:10px; }
-
-nav { background:#111; text-align:center; padding:12px; }
-nav a { color:#fff; margin:0 15px; text-decoration:none; font-weight:bold; }
-
-section { padding:60px 20px; max-width:1100px; margin:auto; }
-h2 { text-align:center; margin-bottom:20px; }
-
-footer { background:#000; color:#ccc; text-align:center; padding:20px; font-size:14px; }
-
-.whatsapp {
- position:fixed;
- bottom:20px;
- right:20px;
- background:#25D366;
- color:#fff;
- padding:14px 18px;
- border-radius:50px;
- text-decoration:none;
- font-weight:bold;
-}
-</style>
+  <meta charset="UTF-8">
+  <title>Velvet Vogue | Luxury Fashion</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header>
-<h1>Velvet Vogue</h1>
-<p>Luxury Fashion • Timeless Style • Modern Elegance</p>
+  <h1>Velvet Vogue</h1>
+  <p class="tagline">Luxury Fashion for Men, Women & Kids</p>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#shop">Shop</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+    <a href="#cart">Cart</a>
+  </nav>
 </header>
 
-<nav>
-<a href="#home">Home</a>
-<a href="#about">About</a>
-<a href="#services">Services</a>
-<a href="#contact">Contact</a>
-<a href="#privacy">Privacy</a>
-<a href="#terms">Terms</a>
-</nav>
-
-<section id="home">
-<h2>Welcome</h2>
-<p>Velvet Vogue is a luxury fashion and style brand dedicated to elegance, confidence, and premium experiences.</p>
+<section id="home" class="section">
+  <h2>Welcome to Velvet Vogue</h2>
+  <p>Premium outfits, accessories, perfumes, shoes & luxury essentials.</p>
 </section>
 
-<section id="about">
-<h2>About Us</h2>
-<p>At Velvet Vogue, we curate fashion and lifestyle inspiration for individuals who value luxury, quality, and sophistication.</p>
+<section id="shop" class="section">
+  <h2>Shop Collection</h2>
+
+  <div class="product">
+    <h3>Luxury Dress</h3>
+    <p>$120</p>
+    <button onclick="addToCart(120)">Add to Cart</button>
+  </div>
+
+  <div class="product">
+    <h3>Designer Handbag</h3>
+    <p>$180</p>
+    <button onclick="addToCart(180)">Add to Cart</button>
+  </div>
 </section>
 
-<section id="services">
-<h2>Our Services</h2>
-<p>Fashion styling, luxury brand consulting, trend insights, and premium lifestyle recommendations.</p>
+<section id="cart" class="section">
+  <h2>Your Cart</h2>
+  <p>Total: $<span id="total">0</span></p>
+  <button onclick="checkout()">Proceed to Checkout</button>
 </section>
 
-<section id="contact">
-<h2>Contact Us</h2>
-<p>Email: velvetvogue@email.com</p>
-<p>WhatsApp: +233598695820</p>
+<section id="about" class="section">
+  <h2>About Us</h2>
+  <p>Velvet Vogue delivers timeless fashion with a modern luxury touch.</p>
 </section>
 
-<section id="privacy">
-<h2>Privacy Policy</h2>
-<p>We respect your privacy. Any information shared is used solely for service communication and improvement.</p>
-</section>
-
-<section id="terms">
-<h2>Terms & Conditions</h2>
-<p>All services are subject to availability and brand guidelines. Velvet Vogue reserves the right to update terms.</p>
+<section id="contact" class="section">
+  <h2>Contact Us</h2>
+  <form>
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message"></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 </section>
 
 <footer>
-© 2026 Velvet Vogue. All rights reserved.
+  <p>© 2026 Velvet Vogue. All Rights Reserved.</p>
 </footer>
 
-<a class="whatsapp" href="https://wa.me/233598695820" target="_blank">
-Chat on WhatsApp
-</a>
-
+<script src="script.js"></script>
 </body>
 </html>
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: white;
+  color: #222;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: #0a2540;
+  color: white;
+}
+
+.tagline {
+  color: #d4af37;
+}
+
+nav {
+  margin-top: 15px;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #d4af37;
+}
+
+.section {
+  padding: 40px;
+  text-align: center;
+}
+
+.product {
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px auto;
+  width: 250px;
+}
+
+button {
+  background: #0a2540;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #d4af37;
+  color: black;
+}
+
+footer {
+  background: #f4f4f4;
+  padding: 20px;
+  text-align: center;
+}
+
+let total = 0;
+
+function addToCart(price) {
+  total += price;
+  document.getElementById("total").innerText = total;
+}
+
+function checkout() {
+  alert("Checkout coming soon!");
+}
+
+https://e55485422-pixel.github.io/velvetvogue-official.github.io/
